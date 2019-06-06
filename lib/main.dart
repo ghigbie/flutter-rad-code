@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'home_screen.dart';
+import 'pages/home_screen.dart';
 
 void main () => runApp(RadCodeApp());
 
