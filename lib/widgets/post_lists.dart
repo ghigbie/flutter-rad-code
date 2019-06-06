@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:radcode/model/dummy_data.dart';
+import 'package:radcode/widgets/post_lists.dart';
 
 class PostList extends StatelessWidget{
   PostList(): super();
