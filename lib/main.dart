@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
-
+import 'home_screen.dart';
 
 void main () => runApp(RadCodeApp());
 
@@ -9,9 +9,7 @@ class RadCodeApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       title: TITLE,
-      theme: ThemeData(
-        primarySwatch: Colors.red[600]
-      ),
+      theme: ThemeData.dark(),
       initialRoute: '/',
       home: HomeScreen(),
     );
