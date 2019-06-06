@@ -6,6 +6,7 @@ Widget buildPostCard(Post post){
     child: Container(
       padding: EdgeInsets.all(15),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children:[
           Text(post.title, style:TextStyle(fontSize: 18)),
           Text('Flutter really dumb text'),
