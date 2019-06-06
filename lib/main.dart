@@ -8,7 +8,6 @@ class RadCodeApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: TITLE,
       theme: ThemeData.dark(),
       initialRoute: '/',
       home: HomeScreen(),
