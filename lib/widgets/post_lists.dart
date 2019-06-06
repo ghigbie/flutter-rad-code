@@ -8,13 +8,15 @@ class PostList extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: EdgeInsets.all(16.0),
-      itemBuilder: (BuildContext _context, int i){
-        if(i < posts.length){
-          return Text(posts[i].title);
-        }
-      },
+    return Expanded(
+      child: ListView.builder(
+        padding: EdgeInsets.all(16.0),
+        itemBuilder: (BuildContext _context, int i){
+          if(i < posts.length){
+            return Text(posts[i].title);
+          }
+        },
+      )
     );
   }
 }
