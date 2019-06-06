@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:radcode/model/dummy_data.dart';
-import 'package:radcode/widgets/post_lists.dart';
+import 'package:radcode/widgets/post_card.dart';
 
 class PostList extends StatelessWidget{
   PostList(): super();
@@ -14,7 +14,7 @@ class PostList extends StatelessWidget{
         padding: EdgeInsets.all(16.0),
         itemBuilder: (BuildContext _context, int i){
           if(i < posts.length){
-            return Text(posts[i].title);
+            return buildPostCard(posts[i]);
           }
         },
       )
