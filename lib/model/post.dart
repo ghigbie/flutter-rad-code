@@ -4,5 +4,4 @@ class Post {
   final List<String> tags;
 
   Post(this.title, this.url, this.tags); //This is a shorthand constructor
-
 }

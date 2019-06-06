@@ -20,9 +20,7 @@ class HomeScreen extends StatelessWidget{
       body: Center(
         child: Column(
           children: [
-            Text('List item 1'),
-            Text('List item 2'),
-            Text('List item 3')
+            PostList()
           ]
         ),
       )
