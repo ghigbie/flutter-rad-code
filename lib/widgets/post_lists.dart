@@ -11,13 +11,13 @@ class PostList extends StatelessWidget{
     return FutureBuilder<List<Post>>(
       future: Post.fetchPosts(),
       builder: (context, snapshot){
-          if (snapshot.connectionState == ConnectonState.done){
+          if (snapshot.connectionState == ConnectionState.done){
             return Expanded(
               child: ListView.builder(
                 padding: EdgeInsets.all(16.0),
                 itemBuilder: (BuildContext _context, int i){
-                  if(i < posts.length){
-                    return buildPostCard(posts[i]);
+                  if(i < snapshot.data.length){
+                    return buildPostCard(snapshot.data[i]);
                   }
                 },
               )
