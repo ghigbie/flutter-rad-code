@@ -9,7 +9,7 @@ Widget _buildTags(List<String> tags){
         padding: EdgeInsets.only(right: 10),
         child: Chip(
           label: Text(tags[i]),
-          backgroundColor: Colors.orange[200],
+          backgroundColor: Colors.blueGrey,
         )
       )
     );
