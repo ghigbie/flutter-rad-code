@@ -19,5 +19,11 @@ class Post {
     //ANDROID EMULATOR URL= http://10.0.2.2:8080/posts
     final url = 'http://localhost:8080/posts';
     final response = await get(url);
+    //Everything below is completed after the response is done
+    if (response.statusCode == 200){
+      List<dynamic> jsonPostList = jsonDecode(response.body);
+    }else{
+      throw Exception('Failed to load post');
+    }
   }
 }
