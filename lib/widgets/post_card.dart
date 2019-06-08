@@ -6,9 +6,11 @@ Widget _buildTags(List<String> tags){
   for (var i = 0; i < tags.length; i++){
     final chip = Container(
       padding: EdgeInsets.only(right: 10),
-      child: Chip(
-        label: Text(tags[i]),
-        backgroundColor: Colors.blueGrey,
+      child: Expanded(
+        child: Chip(
+          label: Text(tags[i]),
+          backgroundColor: Colors.blueGrey,
+        )
       )
     );
     chips.add(chip);
@@ -25,7 +27,7 @@ Widget buildPostCard(Post post){
         children:[
           Text(post.title, style:TextStyle(fontSize: 18)),
           Text('Flutter really dumb text', style:TextStyle(fontSize: 15)),
-          _buildtags(post.tags)
+          _buildTags(post.tags)
         ],
       )
       ),
