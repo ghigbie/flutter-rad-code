@@ -4,12 +4,12 @@ import 'package:radcode/model/post.dart';
 Widget _buildTags(List<String> tags){
   List<Widget> chips = [];
   for (var i = 0; i < tags.length; i++){
-    final chip = Container(
-      padding: EdgeInsets.only(right: 10),
-      child: Expanded(
+    final chip = Expanded(
+      child: Container(
+        padding: EdgeInsets.only(right: 10),
         child: Chip(
           label: Text(tags[i]),
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: Colors.orange[200],
         )
       )
     );
