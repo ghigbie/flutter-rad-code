@@ -18,12 +18,21 @@ class Post {
   static Future<List<Post>> fetchPosts() async{
     //ANDROID EMULATOR URL= http://10.0.2.2:8080/posts
     final url = 'http://localhost:8080/posts';
-    final response = await get(url);
-    //Everything below is completed after the response is done
-    if (response.statusCode == 200){
-      List<dynamic> jsonPostList = jsonDecode(response.body);
-    }else{
-      throw Exception('Failed to load post');
+    try{
+      final response = await get(url);
+      //Everything below is completed after the response is done
+      if (response.statusCode == 200){
+        List<dynamic> jsonPostList = jsonDecode(response.body);
+        List<Post> posts = [];
+        for (var x in jsonPostList){
+          posts.add(Post.fromJSON(x));
+        }
+        return posts;
+      }else{
+        throw Exception('Failed to load post');
+      }
+    }catch (e){
+      throw Exception(e);
     }
   }
 }
